@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>song.kang@china.nttdata.com</contactEmail>
+    <label>PMWB DevOps</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIFETCCAvkCFEn4sFFui0HYxSY6e46c3R5cOS+lMA0GCSqGSIb3DQEBCwUAMEUxCzAJBgNVBAYTAkpQMQ4wDAYDVQQIDAVUb2t5bzEUMBIGA1UEBwwLG1tBG1tCVG9reW8xEDAOBgNVBAoMB050dGRhdGEwHhcNMjIxMTI0MDc0NDM4WhcNMjMxMTI0MDc0NDM4WjBFMQswCQYDVQQGEwJKUDEOMAwGA1UECAwFVG9reW8xFDASBgNVBAcMCxtbQRtbQlRva3lvMRAwDgYDVQQKDAdOdHRkYXRhMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt3OGCvgams6f+n7YWsEk6VxfiE0RY36hB4tv7GpOy110IkCLNpyCScz8JhEJCfMpGfxLqx8zeYfBzeyMjOf8ntKC/jK+SwWpuKx/TAdXyVO3F2uMsneMxlpq/DjsmbIOsGTFBF7iDA+O7Ka6/fM+zzqsgdPOf1rM8UarCrt1ouXhYipCqDCO4fh/VCFIWeTSmc1HFH9qe0nWa4Hlk+go5QELBfvQPxjCNPhlwCHRuBH8lb7nbkInDy7HPfl7hH4KDnnv6sNrZDwtnvMANEU/EnP7sTKCqLEu61xj3z12huQJLS5YtpSkTyCsLltMTk5aOClvytU6lLs6gftauKslhG0LoMyDrER1v19qLalFO5XeylGKicesQ8+Jy954EydTYMlbOb4UYFgtn5iEKaoIVlnMUfHPqP9jau2lUXjaiw5WWmjrlKExGgZjVbTKx+LiOlw8ENioWAAc+LEQTUgSN5yoJU+IbyoCbSLNkajnFQBQZuxefQaRc/agfhOetemDOySM2NdKvq47Z6M1Qhixzpwd9puW2kxXztL9mlQsnA132osK+LuuYsKn0xG9rDSO6VeVPdJa071+oBUgiq/iXn9C7sehuLJ9r5i8/s63ayHZxE9ihMDaZQLD9oHj5SoMjVYhc8e6kw+0Ad7icQRIB3C8FXN4PGld6cswZhCDKm8CAwEAATANBgkqhkiG9w0BAQsFAAOCAgEArfs4Kcfhb5P1MvX+zKXwPmhOPrmfuLdlcqAkE6WU6JVGKFkYRgoF5UyQcPCfxENB/h7BO/+LJ9GnLnhSsDMabLBxg1inHFbBzqneWCpA14A651pepAv3cTATgNqxwEge8Q/QHuC6dBGNCuIv5Q1/0XP7pUMrHwS3U/q22cQ/rZXf2nc1ot26oNUP40AHxXKkPrMrhNgKsMoy4QAgP1kClY8ndIFg6Hw8pGfPNTBRBkSF98vevhDkdoJ7mGVHppiWWrbJ/M/FMt/pdZYPaXGyImmXX2oXDAM1LEeF1WQVFPfe1deghfEgYvNxtj1SdqlRvBMRrrTdlHmWjde66RzIE74WLjkWVv/ohx6UxERVnO9O2KdojZuAyosBxvhtBak8bmajqeIA5Hbkr6MQudPSOoJq3wLKUU8UfLuN/BPS5V0ivdyZq0DEP/lgM8btIdjDMVUtxSZM0lVbyh+rfkm1o+gB8IwWnvvdMprXjC9t4QclDSPIjOZnejJDt88UWZ4JGyL0E0IbJsma5I+1kQuMCnBrLJF0DxJGorJChaIVRxQTu9DNGEEjlH3v5WpPtVYd9iFg3sKJRfOR6xsAZrLVt721DA7CwfcyCJSw7gBpF3UV6zJlMLYkVBTv1Qq4s8xNH9swNOsWttAt0VTV5xrd4OE4lRhxMxYTMpHV/30iENM=</certificate>
+        <consumerKey>3MVG9yRD.KdtVEtrbRziPjaSdE1bxdzmg3xaV2r7tL6o7VtilO5NFNkkc9YilEg8K2lrIaZGD1eRsiVrJTgdf</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>システム管理者</profileName>
+</ConnectedApp>
