@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomListView1</fullName>
+    <columns>NAME</columns>
+    <columns>CustomField1__c</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <label>カスタムリストビュー</label>
+</ListView>
