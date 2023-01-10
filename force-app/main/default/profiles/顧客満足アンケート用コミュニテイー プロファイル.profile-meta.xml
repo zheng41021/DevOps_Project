@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>standard__LightningSales</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <classAccesses>
+        <apexClass>Test01</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Test02</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Test03</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <custom>true</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CustomObject1__c.CustomField1__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <layoutAssignments>
+        <layout>Account-取引先 レイアウト</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CustomObject1__c-CustomObject1レイアウト</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Test__c-テストレイアウト</layout>
+    </layoutAssignments>
+    <tabVisibilities>
+        <tab>CustomObject1__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <userLicense>Guest User License</userLicense>
+</Profile>
