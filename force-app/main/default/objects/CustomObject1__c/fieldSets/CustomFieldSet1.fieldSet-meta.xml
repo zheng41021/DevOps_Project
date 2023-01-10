@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomFieldSet1</fullName>
+    <description>詳細画面</description>
+    <label>カスタム項目セット</label>
+</FieldSet>
