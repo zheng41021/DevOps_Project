@@ -133,8 +133,14 @@ jobs:
             # so here we store the URL into a text file
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
+              env:
+                 SUPER_SECRET: ${{ secrets.ORG_SFDXURL }}  
               run: |
-                  echo ${{ secrets.ORG_SFDXURL }} > ./SFDX_INTEGRATION_URL.txt
+                  echo "$SUPER_SECRET" > ./SFDX_INTEGRATION_URL.txt
+                  
+            # Authenticate to org using the URL stored in the text file
+            - name: 'Authenticate to Integration Org'
+              run: sf org login sfdx-url --sfdx-url-file ./SFDX_INTEGRATION_URL.txt -s -a integration
 
            
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
