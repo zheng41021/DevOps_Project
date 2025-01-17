@@ -49,3 +49,14 @@ jobs:
             # secrets格納ファイルを削除
             - name: 'Remove auth file'
               run: rm -f ./DEVHUB_SFDX_URL.txt
+
+            # sfdx git deltaプラグインをインストールする
+            - name: 'Installing sfdx git delta'
+              run: | 
+                  echo y | sfdx plugins:install sfdx-git-delta
+                  sfdx plugins
+
+             # SFDX scanner をインストールする
+            - name: 'Installing SFDX scanner'
+              run: sfdx plugins:install @salesforce/sfdx-scanner   
+              
