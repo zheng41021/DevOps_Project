@@ -133,21 +133,15 @@ jobs:
               env:
                  SUPER_SECRET: ${{ secrets.ORG_SFDXURL }}  
               run: |
-                  echo ${{ secrets.ORG_SFDXURL }} 
-                  echo ${{ vars.VAR_ORG_SFDXURL }}
-                  echo $VAR_ORG_SFDXURL
-                  echo "$VAR_ORG_SFDXURL"
-                  echo "123"
                   echo ${{ vars.VAR_ORG_SFDXURL }}  > ./SFDX_INTEGRATION_URL.txt
-
-            # Install SFDX scanner
-            - name: 'Installing SFDX scanner'
-              run: sfdx plugins:install @salesforce/sfdx-scanner
                   
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
               run: sf org login sfdx-url --sfdx-url-file ./SFDX_INTEGRATION_URL.txt -s -a integration
-
+              
+            # Install SFDX scanner
+            - name: 'Installing SFDX scanner'
+              run: sfdx plugins:install @salesforce/sfdx-scanner
            
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
             # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
