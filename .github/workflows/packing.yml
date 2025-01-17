@@ -23,13 +23,13 @@ jobs:
                   echo "$nodeInstallPath/bin" >> $GITHUB_PATH
                   sf --version
 
-            # Checkout the source code
+            # 元ブランチから最新ソースコードを取得
             - name: 'Checkout source code'
               uses: actions/checkout@v4
               with:
                   ref: ${{ github.event.client_payload.ref }}
 
-            # Store secret for dev hub
+            # secretsを取得、内容は目標環境のsfdxurl。事前にSettings画面からsecretsを作成する必要がある
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
               shell: bash
               env:
@@ -42,10 +42,10 @@ jobs:
                       exit 1;
                   fi
 
-            # Authenticate dev hub
+            # sfdxurlを利用して組織にログインする
             - name: 'Authenticate Dev Hub'
               run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
-            # Remove auth file
+            # secrets格納ファイルを削除
             - name: 'Remove auth file'
               run: rm -f ./DEVHUB_SFDX_URL.txt
