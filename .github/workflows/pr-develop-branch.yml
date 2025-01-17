@@ -134,11 +134,11 @@ jobs:
                  SUPER_SECRET: ${{ secrets.ORG_SFDXURL }}  
               run: |
                   echo ${{ secrets.ORG_SFDXURL }} 
-                  echo ${{ vars.ORG_SFDXURL }}
+                  echo ${{ vars.VAR_ORG_SFDXURL }}
                   echo $VAR_ORG_SFDXURL
                   echo "$VAR_ORG_SFDXURL"
                   echo "123"
-                  echo ${{ vars.ORG_SFDXURL }}  > ./SFDX_INTEGRATION_URL.txt
+                  echo ${{ vars.VAR_ORG_SFDXURL }}  > ./SFDX_INTEGRATION_URL.txt
 
             # Install SFDX scanner
             - name: 'Installing SFDX scanner'
