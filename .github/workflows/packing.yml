@@ -27,7 +27,7 @@ jobs:
             - name: 'Checkout source code'
               uses: actions/checkout@v4
               with:
-                  ref: ${{ github.event.client_payload.ref }}
+                fetch-depth: 0
 
             # secretsを取得、内容は目標環境のsfdxurl。事前にSettings画面からsecretsを作成する必要がある
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
