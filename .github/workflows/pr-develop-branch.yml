@@ -137,11 +137,11 @@ jobs:
                  SUPER_SECRET: ${{ secrets.ORG_SFDXURL }}  
               run: |
                   echo ${{ secrets.ORG_SFDXURL }} 
-                  echo ${{ env.ORG_SFDXURL }} 
+                  echo ${{ vars.ORG_SFDXURL }}
                   echo $VAR_ORG_SFDXURL
                   echo "$VAR_ORG_SFDXURL"
                   echo "123"
-                  echo $VAR_ORG_SFDXURL > ./SFDX_INTEGRATION_URL.txt
+                  echo ${{ vars.ORG_SFDXURL }}  > ./SFDX_INTEGRATION_URL.txt
                   
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
