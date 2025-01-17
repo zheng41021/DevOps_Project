@@ -1,19 +1,21 @@
-
+# フロー名前
 name: Packaging
 
+# フロー実行時点、本例では、プルリクエストを作成する時点、かつ目標ブランチは「develop」、かつ更新対象はforce-app
+# フォルダでのファイルの場合、実行開始
 on:
     pull_request:
-      types: [opened]
+      types: [opened,synchronize]
       branches: [ develop ]
       paths:
         - 'force-app/**'
         
-
+# ジョブ定義、実施内容を定義、利用するOSはubuntu-latest
 jobs:
     release-package-version:
         runs-on: ubuntu-latest
         steps:
-            
+            # 端末に、Salesforce CLIをインストールする
             - name: 'Install Salesforce CLI'
               run: |
                   npm install @salesforce/cli --location=global
