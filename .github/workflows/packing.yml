@@ -56,7 +56,20 @@ jobs:
                   echo y | sfdx plugins:install sfdx-git-delta
                   sfdx plugins
 
-             # SFDX scanner をインストールする
+            # SFDX scanner をインストールする
             - name: 'Installing SFDX scanner'
               run: sfdx plugins:install @salesforce/sfdx-scanner   
-              
+
+            # sfdx git deltaを利用して、Featureブランチのメタデータから差分を抽出して、changed-sourcesフォルダにコピペ
+            - name: 'Create delta packages for new, modified or deleted metadata'
+              run: | 
+                  mkdir changed-sources
+                  sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
+                  
+            # apexクラスをスキャンして、規約違反があるかどうかをチェック
+            - name: 'Scan code'
+              run: |
+                  cd changed-sources
+                  sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'  
+                  cd ..
+                  
