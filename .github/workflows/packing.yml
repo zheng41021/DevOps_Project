@@ -84,4 +84,16 @@ jobs:
               run: | 
                   mkdir -p changed-sources
                   sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
-                  cd changed-sources
+            
+            # Salesforceテストを実施してメタデータをデプロイ Level:RunLocalTests    
+            - name: 'Check-only deploy delta changes - run specified tests'
+              run: |
+                  sfdx force:source:deploy -p "changed-sources/force-app" --checkonly --testlevel RunLocalTests  --json
+            
+            # 削除部分メタデータを組織から削除 
+            - name: 'Deploy destructive changes (if any)'
+              run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings       
+
+            
+
+
