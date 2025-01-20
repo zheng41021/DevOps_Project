@@ -4,6 +4,6 @@ public class Test01 {
     public static void getTest01() {
         //System.debug('Source Scanner 1');
 
-        Integer a ;
+        Integer b ;
     }
 }
