@@ -70,7 +70,7 @@ jobs:
             # sfdx git deltaを利用して、Featureブランチのメタデータから差分を抽出して、changed-sourcesフォルダにコピペ
             - name: 'Create delta packages for new, modified or deleted metadata'
               run: | 
-                  mkdir changed-sources
+                  mkdir -p changed-sources
                   sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
                   
             # apexクラスをスキャンして、規約違反があるかどうかをチェック
