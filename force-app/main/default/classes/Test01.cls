@@ -6,5 +6,6 @@ public class Test01 {
         System.debug('Source Scanner 2');
 
         Integer a ;
+        Integer b ;
     }
 }
