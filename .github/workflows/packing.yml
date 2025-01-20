@@ -67,21 +67,21 @@ jobs:
             - name: 'Installing SFDX scanner'
               run: sfdx plugins:install @salesforce/sfdx-scanner   
 
-            # sfdx git deltaを利用して、Featureブランチのメタデータから差分を抽出して、changed-sourcesフォルダにコピペ
-            - name: 'Create delta packages for new, modified or deleted metadata'
-              run: | 
-                  mkdir -p changed-sources
-                  sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
-                  
             # apexクラスをスキャンして、規約違反があるかどうかをチェック
             - name: 'Scan code'
               run: |
-                  cd changed-sources
-                  sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'  
-                  cd ..
+                  sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif' 
                   
             # Now we upload the .sarif file as explained in the previous step
             - name: Upload SARIF file
               uses: github/codeql-action/upload-sarif@v3
               with:
-                sarif_file: changed-sources/apexScanResults.sarif      
+                sarif_file: apexScanResults.sarif     
+
+            
+            # sfdx git deltaを利用して、Featureブランチのメタデータから差分を抽出して、changed-sourcesフォルダにコピペ
+            - name: 'Create delta packages for new, modified or deleted metadata'
+              run: | 
+                  mkdir -p changed-sources
+                  sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
+                  cd changed-sources
