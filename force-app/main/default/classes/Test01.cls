@@ -1,4 +1,6 @@
 public class Test01 {
-//difflog
-//0102
+
+    public static void getTest01() {
+        System.debug('Test01');
+    }
 }
