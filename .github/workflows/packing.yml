@@ -96,7 +96,7 @@ jobs:
             # force:mdapi:deploy -d, --deploydir → sf project delete source --metadata-dir
             # https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_project_commands_unified.htm#cli_reference_project_deploy_validate_unified
             - name: 'Deploy destructive changes (if any)'
-              run: sf project delete source --source-dir "changed-sources/destructiveChanges" -o devhub      
+              run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings
 
             
 
