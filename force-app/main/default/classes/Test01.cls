@@ -4,5 +4,7 @@ public class Test01 {
     public static void getTest01() {
         System.debug('Source Scanner 1');
         System.debug('Source Scanner 2');
+
+        Integer a ;
     }
 }
