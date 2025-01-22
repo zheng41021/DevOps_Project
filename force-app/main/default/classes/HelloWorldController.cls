@@ -3,7 +3,10 @@ public class HelloWorldController {
     
     public HelloWorldController() {
         
+        // 問題があるソースを追加:定義したが、利用されない
+        Integer a;
+
         demo = 'Hello world - 2025/01/22 15:23';
-        
+
     }
 }
