@@ -1,4 +1,4 @@
-<apex:page controller="CustomContactController">
+<apex:page controller="HelloWorldController">
     <apex:slds />
     <style>
         .artistic-text {
