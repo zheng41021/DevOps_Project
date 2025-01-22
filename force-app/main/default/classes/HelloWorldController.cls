@@ -3,9 +3,6 @@ public class HelloWorldController {
     
     public HelloWorldController() {
         
-        Integer a ;
-        
         demo = 'Hello World - 2025/01/22';
-
     }
 }
