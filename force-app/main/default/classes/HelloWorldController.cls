@@ -3,6 +3,8 @@ public class HelloWorldController {
     
     public HelloWorldController() {
         
-        demo = 'Hello World - 2025/01/22';
+        Integer a;
+        
+        demo = 'Hello world - 2025/01/22';
     }
 }
