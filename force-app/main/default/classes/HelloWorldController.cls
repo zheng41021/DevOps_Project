@@ -4,5 +4,6 @@ public class HelloWorldController {
     public HelloWorldController() {
         
         demo = 'Hello world - 2025/01/22 15:23';
+        
     }
 }
