@@ -1,0 +1,11 @@
+<apex:page controller="HelloWorldController">
+    <apex:slds />
+    <div class="slds-card">
+        <div class="slds-card__header">
+            <h2 class="slds-text-heading_small slds-card__header-title">Greetings</h2>
+        </div>
+        <div class="slds-card__body">
+            <p>{!demo}</p>
+        </div>
+    </div>
+</apex:page>
