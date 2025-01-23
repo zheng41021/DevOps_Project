@@ -7,7 +7,7 @@ public class HelloWorldController {
         demo = 'Hello world - 2025/01/23 11:13';
 
         // 規約違反ソースを追加
-        Integer a;
+        Integer b;
 
     }
 }
