@@ -4,7 +4,7 @@ public class HelloWorldController {
     public HelloWorldController() {
 
         // ホームページで表示するVisualforceページのようこそ文字列
-        demo = 'Hello world - 2025/01/23 10:58';
+        demo = 'Hello world - 2025/01/23 11:13';
 
     }
 }
