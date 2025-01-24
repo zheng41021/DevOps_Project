@@ -8,12 +8,7 @@ public class HelloWorldController {
     public HelloWorldController() {
 
         // ようこそ文字列
-        demo = 'Hello world - 2025/01/23 10:00';
-
-
-        // 規約違反ソース
-        Integer test_aaa;
-
+        demo = 'Hello world - 2025/01/24 11:07';
         
     }
 }
