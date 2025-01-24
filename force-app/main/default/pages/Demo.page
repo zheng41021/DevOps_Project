@@ -1,0 +1,19 @@
+<apex:page controller="HelloWorldController">
+    <apex:slds />
+    <style>
+        .artistic-text {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    </style>
+    <div class="slds-card">
+        <div class="slds-card__header">
+            <h2 class="slds-text-heading_small slds-card__header-title">Greetings</h2>
+        </div>
+        <div class="slds-card__body slds-text-align_center">
+            <p class="artistic-text">{!demo}</p>
+        </div>
+    </div>
+</apex:page>
