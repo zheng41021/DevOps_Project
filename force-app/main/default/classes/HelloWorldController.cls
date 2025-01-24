@@ -1,13 +1,12 @@
 public class HelloWorldController {
+
+    // ホームページで表示するVisualforceページのようこそ文字列
     public String demo { get; set; }
     
     public HelloWorldController() {
 
-        // ホームページで表示するVisualforceページのようこそ文字列
+        // ようこそ文字列
         demo = 'Hello world - 2025/01/23 18:05';
-
-        // 規約違反ソースを追加
-        Integer test_5 ;
 
     }
 }
